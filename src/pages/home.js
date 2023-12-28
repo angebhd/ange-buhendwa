@@ -3,22 +3,28 @@ import "../styles/home.css"
 
 function Home() {
     return(
+        <>
         <div id="home">
+
             <div className="img"> <img src="https://avatars.githubusercontent.com/u/143657234?v=4" alt="Ange BUHENDWA" ></img> </div>
-            <div className="about">
-                <p> Hello, I'm <strong>Ange BUHENDWA</strong>, a tech enthusiast with a background in electronics and a current focus on Network and Communication Systems in university. My journey into the world of technology began in high school, where I delved into a myriad of electronic disciplines. From embedded electronics to comprehensive electronic systems, I honed my skills in programming microprocessors and grasped the intricacies of electric installations within residential spaces. </p>
-
-                <p> My passion for technology led me to explore diverse areas, including electronic assembly and even self-taught basics in web development. This multifaceted exposure not only broadened my understanding but also ignited a profound interest in software development and cybersecurity.</p>
-
-                <p> At heart, I am captivated by the ever-evolving landscape of technology and its potential to shape the world. My enthusiasm drives me to continually seek new knowledge and skills, eager to contribute my expertise to this dynamic field. </p>
-
-                <p> I believe that understanding the synergy between hardware and software is pivotal in creating robust and secure systems, which is why I am committed to bridging the gap between these realms. From building intricate electronic circuits to diving into lines of code, I am driven by the convergence of innovation and security in technology. </p>
-
-                <p> As I pursue my studies in Network and Communication Systems, I am excited about the endless possibilities and challenges that lie ahead. My ambition is to carve a path where my passion for technology and my skills intersect, contributing meaningfully to advancements in software, cybersecurity, and everything tech-related. </p>
-                <p>Thank you for visiting my corner of the internet, where I aim to share some articles, insights, and enthusiasm for all things tech.</p>
+            <div className="details">
+                <h1>Hey, I'm Ange BUHENDWA</h1>
+                <h3>Junior Web developer</h3>
+                <h3>IT student</h3>
+                <h3>Electronic Engineer</h3>
             </div>
-
         </div>
+        <hr></hr>
+        <p className="github"><a href="https://github.com/angebhd" target="_blank" rel="noreferrer">Visit my Github <br /><br /> <i className='fab fa-github'></i></a></p>
+        <hr></hr>
+        <div className="socialNetwork">
+            <button>Contact me</button>
+            <p><a href="mailto: mickaelbhd@gmail.com" target="_blank" rel="noreferrer"><i className='fas fa-envelope'></i></a> <br /> Mail </p>
+            <p><a href="https://www.linkedin.com/in/angebhd" target="_blank" rel="noreferrer"><i className='fab fa-linkedin'></i></a><br /> LinkedIn</p>
+            <p><a href="https://twitter.com/angebhd" target="_blank" rel="noreferrer"><i className='fab fa-twitter'></i></a> <br /> Twitter </p>
+            <p><a href="https://wa.me/+250722953397" target="_blank" rel="noreferrer"><i className='fab fa-whatsapp'></i></a> <br /> Whatsapp </p>
+        </div>
+        </>   
     )
 }
 

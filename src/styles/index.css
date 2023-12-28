@@ -1,21 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Font */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* Header */
 body{
     margin: 0;
+    background-color: rgb(255, 184, 127);
+    /* background-color: rgb(255, 170, 101); */
+
+
 }
+
+
 header, footer{
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-end;
     align-items: center;
     padding: 10px 20px;
-    background-color: black;
+    background-color: rgb(152, 70, 3);
     color: #fff;
-}
-header h1{
-    margin: 0;
-    padding: 1px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size:large;
 }
 
 nav{
@@ -31,7 +41,7 @@ nav p:hover {
     cursor: pointer; 
   }
   nav p a{
-    color: blue;
+    color: white;
     font-weight: 800;
     text-decoration: none;
     padding: 1px;
@@ -50,15 +60,4 @@ footer p.copy{
     margin: 0;
     padding: 8px 0;
 }
-div.socialNetwork {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px
-}
-div.socialNetwork p{
-    text-align: center;
-}
-div.socialNetwork p a {
-    font-size: large;
-    color: #fff;
-}
+
