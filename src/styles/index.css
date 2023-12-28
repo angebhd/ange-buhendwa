@@ -53,9 +53,10 @@ footer {
     flex-direction: column;
     padding: 0;        
 }
+
 footer p.copy{
     width: 100%;
-    border-top: solid 2px blue;
+    border-top: solid 3px black;
     text-align: center;
     margin: 0;
     padding: 8px 0;

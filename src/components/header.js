@@ -7,7 +7,7 @@ function Header() {
 
                 <p><Link to="/">HOME</Link></p>
                 <p><Link to="/about">ABOUT</Link></p>
-                <p><Link to="/blog">BLOG</Link></p>
+                <p><a href="/blog.html">BLOG</a></p>
 
             </nav>
         </header>

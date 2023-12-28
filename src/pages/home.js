@@ -18,7 +18,7 @@ function Home() {
         <p className="github"><a href="https://github.com/angebhd" target="_blank" rel="noreferrer">Visit my Github <br /><br /> <i className='fab fa-github'></i></a></p>
         <hr></hr>
         <div className="socialNetwork">
-            <button>Contact me</button>
+            <button>Contact</button>
             <p><a href="mailto: mickaelbhd@gmail.com" target="_blank" rel="noreferrer"><i className='fas fa-envelope'></i></a> <br /> Mail </p>
             <p><a href="https://www.linkedin.com/in/angebhd" target="_blank" rel="noreferrer"><i className='fab fa-linkedin'></i></a><br /> LinkedIn</p>
             <p><a href="https://twitter.com/angebhd" target="_blank" rel="noreferrer"><i className='fab fa-twitter'></i></a> <br /> Twitter </p>
