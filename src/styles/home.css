@@ -11,7 +11,7 @@ div.img{
 
 img{
     border-radius: 50%;
-    max-width: 99%;
+    max-width: 60%;
     margin: 5px auto;
 }
 
@@ -32,29 +32,32 @@ hr {
     max-width: 300px;
     color: black;
 }
-p.github{
+p.github, p.more-par{
     padding: 10px;
     text-align: center;
 }
-p.github:hover{
+p.github:hover, p.more-par:hover{
     text-decoration: underline;
 }
-p.github a{
-    color: #000;
+p.github a, p.more-par a{
+
+    color: rgb(152, 70, 3);
+    font-weight: bold;
     text-decoration: none;
 }
 p.github a i{
+    color: #000;
     font-size: xx-large;
 
 }
 
-div.socialNetwork {
+div.container {
     padding: 10px;
     display: flex;
     flex-direction: column;
     
 }
-div.socialNetwork button{
+div.container button{
     background-color: rgb(152, 70, 3);
     border-color: rgb(152, 70, 3);
     padding: 4px;
@@ -62,10 +65,10 @@ div.socialNetwork button{
     color: white;
     margin: 2px auto;
 }
-div.socialNetwork p{
+div.container p{
     text-align: center;
 }
-div.socialNetwork p a{
+div.container p a{
     font-size: x-large;
     color: #000;
     text-decoration: none;
