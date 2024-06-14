@@ -1,4 +1,6 @@
+
 #home{
+    margin-top: 40px;
     padding: 20px;
 
 }
@@ -13,6 +15,7 @@ img{
     border-radius: 50%;
     max-width: 60%;
     margin: 5px auto;
+    margin-top: 20px;
 }
 
 div.details{
@@ -32,14 +35,14 @@ hr {
     max-width: 300px;
     color: black;
 }
-p.github, p.more-par{
+p.github{
     padding: 10px;
     text-align: center;
 }
-p.github:hover, p.more-par:hover{
+p.github:hover{
     text-decoration: underline;
 }
-p.github a, p.more-par a{
+p.github a{
 
     color: rgb(152, 70, 3);
     font-weight: bold;

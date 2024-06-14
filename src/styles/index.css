@@ -4,6 +4,7 @@
 /* Font */
 body {
     font-family: 'Roboto', sans-serif;
+
 }
 
 h1,
@@ -25,12 +26,16 @@ body {
 header,
 footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content:center;
     align-items: center;
     height: auto;
     padding: 0px 20px;
     background-color: rgb(152, 70, 3);
-    color: #fff;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 nav {
@@ -44,22 +49,30 @@ nav p {
 }
 
 nav p:hover {
-    text-decoration: underline;
     cursor: pointer;
 
 }
 
 nav p a {
-    color: white;
-    font-weight: 800;
+    color: black;
+    font-weight: bold;
     text-decoration: none;
-    padding: 8px;
+    padding: 20px;
 }
 
 nav p a:hover {
-    color: rgb(152, 70, 3);
-    background-color: #fff;
+    color: rgb(255, 184, 127);;
 
+}
+p.blog-para a{
+    color: white;
+}
+h1{
+    color: #333;
+}
+
+#angebhd{
+    color: rgb(152, 70, 3);
 }
 
 button.menu-button {
@@ -93,11 +106,17 @@ footer p.copy {
         font-size: 1.2rem;
         color: #fff;
         background-color: rgb(152, 70, 3);
+
     }
     header{
-        padding-left: 0;
+        margin: 0;
+        padding: 0;
         flex-direction: column;
         align-items: start;
+        background-color: rgb(152, 70, 3);
+        height: fit-content;
+        position: relative;
+
     }
     nav {
         display: none;
@@ -106,6 +125,7 @@ footer p.copy {
         margin-left: 20px;
         display: flex;
         flex-direction: column;
+        height: auto;
     }
     hr{
         width: 100%;

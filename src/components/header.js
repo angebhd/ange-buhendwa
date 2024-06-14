@@ -8,24 +8,35 @@ function Header() {
             nav[0].className += " show";
             // btn[0].innerHTML =  "&#10060; CLOSE";
 
-            btn[0].innerHTML = "✖ CLOSE";
+            btn[0].innerHTML = "✗ CLOSE";
         } else {
             nav[0].className = 'nav';
             btn[0].innerHTML = "☰ MENU";
         }
 
     }
+    const handleNavigation = (event, targetId) => {
+        event.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth',
+            });
+        }
+    };
 
 
     return (
         <header>
             <button className="menu-button" onClick={toggleNav}>☰ MENU</button>
             <nav className="nav">
-                <hr></hr>
-                <p><Link to="/">HOME</Link></p>  <hr></hr>
-                <p><Link to="/about">ABOUT ME</Link></p>  <hr></hr>
-                <p><Link to="/project">PROJECTS</Link></p>  <hr></hr>
-                <p><a href="/blog.html">BLOG</a></p>
+                <p><Link to="/home" onClick={ (e) => handleNavigation (e, "home")} >HOME</Link></p>
+                <p><Link to="/#about" onClick={ (e) => handleNavigation (e, "about")} >ABOUT ME</Link></p>
+                <p><Link to="/#project" onClick={ (e) => handleNavigation (e, "project")} >PROJECTS</Link></p>
+                <p><Link to="/#contact" onClick={ (e) => handleNavigation (e, "contact")} >CONTACT</Link></p>
+
+                <p className="blog-para"><Link to="/blog" >BLOG</Link></p>
             </nav>
         </header>
     )
