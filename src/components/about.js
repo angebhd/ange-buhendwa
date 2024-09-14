@@ -36,11 +36,10 @@ function About() {
                     <h2> Skills </h2>
                     <h3>Programming languages and Frameworks: </h3>
                     <ul>
-                        <li> HTML/CSS </li>
+                        <li> HTML/CSS/JavaScript </li>
+                        <li> ReactJS/node/express </li>
+                        <li> mongoDB/MySQL/postgreSQL </li>
                         <li> PHP </li>
-                        <li> JavaScript </li>
-                        <li> node/React </li>
-                        <li> MySQL/Mongo </li>
                     </ul>
                     <h3> Computer Networks </h3>
                     <h3> Electronic enginnering </h3>

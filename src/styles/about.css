@@ -1,5 +1,6 @@
 div.about {
     max-width: 1000px;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,4 +36,12 @@ div.about div {
 div.certifications a {
     color: rgb(152, 70, 3);
     text-decoration: none;
+}
+
+@media screen and (max-width: 468px) {
+    div.about {
+        padding-top: 150px;
+    }
+
+
 }
