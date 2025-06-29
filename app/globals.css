@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+    --color-black: #000;
+    --color-black-100: #000319;
+    --color-black-200: 'rgba(17,25,40,0.75)';
+    --color-black-300: 'rgba(255,255,255,0.125)';
+    --color-white: #fff;
+    --color-white-100: '#BEC1DD';
+    --color-white-200: #C1C2D3;
+    --color-blue-100: '#E4ECFF';
+}
+
+@theme inline {
+    --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+}
+
+@keyframes spotlight {
+    0% {
+        opacity: 0;
+        transform: translate(-72%, -62%) scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -40%) scale(1);
+    }
+}
