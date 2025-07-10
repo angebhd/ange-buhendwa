@@ -9,10 +9,61 @@
     --color-white-100: '#BEC1DD';
     --color-white-200: #C1C2D3;
     --color-blue-100: '#E4ECFF';
+    --color-purple: '#CBACF9'
 }
 
 @theme inline {
     --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+
+    /* Gradient Animation 6 cards */
+    --animate-first: moveVertical 30s ease infinite;
+    --animate-second: moveInCircle 20s reverse infinite;
+    --animate-third: moveInCircle 40s linear infinite;
+    --animate-fourth: moveHorizontal 40s ease infinite;
+    --animate-fifth: moveInCircle 20s ease infinite;
+
+    @keyframes moveHorizontal {
+        0% {
+            transform: translateX(-50%) translateY(-10%);
+        }
+
+        50% {
+            transform: translateX(50%) translateY(10%);
+        }
+
+        100% {
+            transform: translateX(-50%) translateY(-10%);
+        }
+    }
+
+    @keyframes moveInCircle {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes moveVertical {
+        0% {
+            transform: translateY(-50%);
+        }
+
+        50% {
+            transform: translateY(50%);
+        }
+
+        100% {
+            transform: translateY(-50%);
+        }
+    }
+    /* End Gradian anim */
 }
 
 @keyframes spotlight {
@@ -25,4 +76,14 @@
         opacity: 1;
         transform: translate(-50%, -40%) scale(1);
     }
+}
+
+@layer utilities {
+  .heading {
+    @apply font-bold text-4xl md:text-5xl text-center;
+  }
+
+  .black-gradient {
+    background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
+  }
 }
