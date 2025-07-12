@@ -1,3 +1,4 @@
+import Clients from "@/components/Clients";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RencentProject from "@/components/RencentProject";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Grid />
         <RencentProject />
+        <Clients />
       </div>
     </main>
 

@@ -56,7 +56,7 @@ export const BentoGridItem = ({
 }) => {
 
     const [copied, setCopied] = useState(false);
-    const handleCopy = ()=> {
+    const handleCopy = () => {
         navigator.clipboard.writeText("mickaelbhd@gmail.com")
         setCopied(true);
 
@@ -71,7 +71,7 @@ export const BentoGridItem = ({
             /// cssggradient.io
             style={{
                 background: '#040729',
-                backgroundColor: 'linear - gradient(90deg, rgba(4, 7, 29, 1) 0 %, rgba(12, 14, 35, 1) 50 %, rgba(237, 221, 83, 1) 100 %)'
+                backgroundColor: 'linear-gradient(90deg, rgba(4, 7, 29, 1) 0 %, rgba(12, 14, 35, 1) 50 %, rgba(237, 221, 83, 1) 100 %)'
             }}
         >
             <div className={`${id === 6 && 'flex justify-center'} h-full`} >
@@ -93,7 +93,7 @@ export const BentoGridItem = ({
                 </div>
                 {id === 6 && (
                     <BackgroundGradientAnimation>
-                        
+
                     </BackgroundGradientAnimation>
 
                 )}
@@ -134,7 +134,7 @@ export const BentoGridItem = ({
                                         loop: copied,
                                         autoplay: copied,
                                         animationData: animationData,
-                                        rendererSettings: { 
+                                        rendererSettings: {
                                             preserveAspectRatio: 'xMidYMid slice'
                                         }
 
@@ -142,11 +142,11 @@ export const BentoGridItem = ({
                                 />
                             </div>
                             <MagicButton
-                            title={copied ? "Email copied" : "Copy my email"}
-                            icon ={<IoCopyOutline/>}
-                            position="left"
-                            otherClasses="!bg-[#161a31]"
-                            handleClick={handleCopy}
+                                title={copied ? "Email copied" : "Copy my email"}
+                                icon={<IoCopyOutline />}
+                                position="left"
+                                otherClasses="!bg-[#161a31]"
+                                handleClick={handleCopy}
                             />
 
                         </div>
