@@ -4,25 +4,31 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaJava, FaDocker, FaLinux } from 'react-icons/fa'
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiNestjs, SiSpringboot, SiMysql, SiPostgresql, SiPrisma, SiJsonwebtokens, SiNginx, SiArduino } from 'react-icons/si'
+import { skills as skillsData } from '@/data'
 
-const skills = [
-    { name: 'React', icon: FaReact, color: 'text-blue-500' },
-    { name: 'Next.js', icon: SiNextdotjs, color: 'text-gray-900 dark:text-white' },
-    { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600' },
-    { name: 'Node.js', icon: FaNodeJs, color: 'text-green-600' },
-    { name: 'Express', icon: SiExpress, color: 'text-gray-700 dark:text-gray-300' },
-    { name: 'NestJS', icon: SiNestjs, color: 'text-red-600' },
-    { name: 'Spring Boot', icon: SiSpringboot, color: 'text-green-700' },
-    { name: 'Java', icon: FaJava, color: 'text-orange-600' },
-    { name: 'TailwindCSS', icon: SiTailwindcss, color: 'text-cyan-500' },
-    { name: 'MongoDB', icon: SiMongodb, color: 'text-green-500' },
-    { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-700' },
-    { name: 'MySQL', icon: SiMysql, color: 'text-blue-600' },
-    { name: 'Prisma', icon: SiPrisma, color: 'text-gray-900 dark:text-white' },
-    { name: 'Docker', icon: FaDocker, color: 'text-blue-500' },
-    { name: 'Nginx', icon: SiNginx, color: 'text-green-600' },
-    { name: 'Git', icon: FaGitAlt, color: 'text-red-500' },
-]
+const skillIcons: { [key: string]: any } = {
+    'React': FaReact,
+    'Next.js': SiNextdotjs,
+    'TypeScript': SiTypescript,
+    'Node.js': FaNodeJs,
+    'Express': SiExpress,
+    'NestJS': SiNestjs,
+    'Spring Boot': SiSpringboot,
+    'Java': FaJava,
+    'TailwindCSS': SiTailwindcss,
+    'MongoDB': SiMongodb,
+    'PostgreSQL': SiPostgresql,
+    'MySQL': SiMysql,
+    'Prisma': SiPrisma,
+    'Docker': FaDocker,
+    'Nginx': SiNginx,
+    'Git': FaGitAlt,
+}
+
+const skills = skillsData.map(skill => ({
+    ...skill,
+    icon: skillIcons[skill.name] || FaDatabase
+}))
 
 export default function Skills() {
     return (
@@ -44,7 +50,7 @@ export default function Skills() {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
                     {skills.map((skill, index) => (
                         <motion.div
                             key={skill.name}

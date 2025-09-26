@@ -3,36 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
-
-const projects = [
-    {
-        id: 1,
-        title: "University Management System",
-        description: "Academic project for Web Technology & Internet course. Comprehensive system to manage students, staff, registrations, and attendance with modern web technologies.",
-        technologies: ["React", "TailwindCSS", "Spring Boot"],
-        liveUrl: "#",
-        githubUrl: "https://github.com/angebhd/auca-webTech-finalExam",
-        backendUrl: "https://github.com/angebhd/auca-webTech-midExam",
-        type: "Academic Project"
-    },
-    {
-        id: 2,
-        title: "Imizi",
-        description: "A family cohesion mobile app for the Gender & Family Innovation Challenge (RISA, UN Women, Ministry of Gender). Strengthens family bonds through shared activities and communication tools.",
-        technologies: ["React Native", "Expo", "Express.js", "MongoDB"],
-        liveUrl: "#",
-        githubUrl: "https://github.com/angebhd/imizi-app"
-    },
-    {
-        id: 3,
-        title: "Real Estate Platform",
-        description: "A comprehensive platform for renting houses, property discovery, and rent management. Built with enterprise-grade architecture and security.",
-        technologies: ["Next.js", "NestJS", "PostgreSQL", "JWT"],
-        liveUrl: "#",
-        githubUrl: "#",
-        status: "In Development"
-    }
-]
+import { projects } from '@/data'
 
 export default function Projects() {
     return (
@@ -54,7 +25,7 @@ export default function Projects() {
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {projects.map((project, index) => (
                         <motion.div
                             key={project.id}

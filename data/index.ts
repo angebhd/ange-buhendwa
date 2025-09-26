@@ -1,260 +1,155 @@
-export const gridItems = [
-  {
-    id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
-    spareImg: "",
-  },
-  {
-    id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
-  },
+export const personalInfo = {
+  name: "Ange Buhendwa",
+  title: "Software Developer & Electronics Engineer",
+  description: "I specialize in backend development, building scalable APIs and server-side applications with Spring Boot, Node.js, and database technologies. Currently training at Rwanda's most intensive software development program while pursuing my final year in IT.",
+  email: "mickaelbhd@gmail.com",
+  social: {
+    github: "https://github.com/angebhd",
+    linkedin: "https://www.linkedin.com/in/angebhd/",
+    twitter: "https://x.com/angebhd"
+  }
+}
 
-  {
-    id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
-    className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
-  },
-  {
-    id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
-  },
-];
+export const about = {
+  title: "Bridging Hardware & Software Innovation",
+  description: [
+    "I'm Ange Buhendwa, a final-year Information Technology student with a unique foundation in Electrical and Electronics Engineering. This dual perspective allows me to understand technology from both hardware and software angles, with a strong focus on backend architecture and system design.",
+    "Currently enrolled in the-gym Rwanda's 12-month intensive software development program, dedicating 20-25 hours weekly to advanced training in JavaScript fundamentals, React.js, Node.js, and Test Driven Development. I receive weekly one-on-one coaching from international senior developers while working on projects with increasing complexity, preparing for international client work standards."
+  ],
+  techStacks: [
+    {
+      category: "Backend & APIs",
+      technologies: "Spring Boot, Node.js, Express, NestJS, RESTful APIs, TDD, CI/CD"
+    },
+    {
+      category: "Database & Storage", 
+      technologies: "PostgreSQL, MySQL, MongoDB, Prisma, Database Design, Query Optimization"
+    },
+    {
+      category: "Frontend (Supporting)",
+      technologies: "React, Next.js, TypeScript, TailwindCSS"
+    },
+    {
+      category: "DevOps & Hardware",
+      technologies: "Docker, Nginx, Git, Linux, Arduino, NodeMCU, Active Directory"
+    }
+  ]
+}
+
+export const skills = [
+  { name: 'React', color: 'text-blue-500' },
+  { name: 'Next.js', color: 'text-gray-900 dark:text-white' },
+  { name: 'TypeScript', color: 'text-blue-600' },
+  { name: 'Node.js', color: 'text-green-600' },
+  { name: 'Express', color: 'text-gray-700 dark:text-gray-300' },
+  { name: 'NestJS', color: 'text-red-600' },
+  { name: 'Spring Boot', color: 'text-green-700' },
+  { name: 'Java', color: 'text-orange-600' },
+  { name: 'TailwindCSS', color: 'text-cyan-500' },
+  { name: 'MongoDB', color: 'text-green-500' },
+  { name: 'PostgreSQL', color: 'text-blue-700' },
+  { name: 'MySQL', color: 'text-blue-600' },
+  { name: 'Prisma', color: 'text-gray-900 dark:text-white' },
+  { name: 'Docker', color: 'text-blue-500' },
+  { name: 'Nginx', color: 'text-green-600' },
+  { name: 'Git', color: 'text-red-500' }
+]
 
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "University Management System",
+    description: "Academic project for Web Technology & Internet course. Comprehensive system to manage students, staff, registrations, and attendance with modern web technologies.",
+    technologies: ["React", "TailwindCSS", "Spring Boot"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/angebhd/auca-webTech-finalExam",
+    backendUrl: "https://github.com/angebhd/auca-webTech-midExam",
+    type: "Academic Project"
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    title: "Imizi",
+    description: "A family cohesion mobile app for the Gender & Family Innovation Challenge (RISA, UN Women, Ministry of Gender). Strengthens family bonds through shared activities and communication tools.",
+    technologies: ["React Native", "Expo", "Express.js", "MongoDB"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/angebhd/imizi-app"
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
-  },
-  {
-    id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
-  },
-];
+    title: "Real Estate Platform",
+    description: "A comprehensive platform for renting houses, property discovery, and rent management. Built with enterprise-grade architecture and security.",
+    technologies: ["Next.js", "NestJS", "PostgreSQL", "JWT"],
+    liveUrl: "#",
+    githubUrl: "#",
+    status: "In Development"
+  }
+]
 
-export const testimonials = [
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-];
+export const experience = {
+  training: {
+    title: "Software Development Training",
+    company: "the-gym Rwanda",
+    period: "Nov 2024 – Present (~11 months)",
+    description: "Rwanda's most intense software development program - a 12-month intensive training with 20-25 hours/week workload. Focuses on JavaScript fundamentals, React.js, Node.js, algorithm training, Test Driven Development, CI/CD pipelines, and agile methodologies. Includes weekly one-on-one coaching with international senior developers, project work with increasing complexity, and professional communication skills for international client projects."
+  }
+}
 
-export const companies = [
+export const certifications = [
   {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
+    title: "Agile Project Management",
+    issuer: "Google",
+    date: "Aug 2024",
+    credential: "U7UL021NFGH3",
+    link: "https://www.coursera.org/account/accomplishments/verify/U7UL021NFGH3"
   },
   {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
+    title: "Advanced Network Operations",
+    issuer: "Internet Society",
+    date: "Apr 2024",
+    credential: "",
+    link: "https://certificates.isoc.org/50db0a66-3e96-49c1-9e81-6ac5f9319947#gs.8f69tg"
   },
   {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
+    title: "Junior Software Development",
+    issuer: "BAG Technologies",
+    date: "Feb 2024",
+    credential: "",
+    link: "https://app.bag.work/certificate/303767cc-9d18-4b82-ada7-ac4a52b0f215"
   },
   {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
+    title: "Network Security",
+    issuer: "Cisco Networking Academy",
+    date: "Oct 2023",
+    credential: "",
+    link: "https://www.credly.com/badges/29a1b73d-ac83-48cb-a089-a9f543f1b4a3/public_url"
   },
   {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
-  },
-];
+    title: "Responsive Web Design",
+    issuer: "freeCodeCamp",
+    date: "Apr 2023",
+    credential: "",
+    link: "https://www.freecodecamp.org/certification/angebhd/responsive-web-design"
+  }
+]
 
-export const workExperience = [
+export const achievements = [
   {
-    id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-    className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    title: "2nd Place at PicoCTF Africa",
+    description: "Undergraduate National Level Cybersecurity Competition",
+    year: "2024"
   },
   {
-    id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
-];
-
-export const socialMedia = [
-  {
-    id: 1,
-    img: "/git.svg",
-  },
-  {
-    id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
-    img: "/link.svg",
-  },
-];
-
+    title: "Gender & Family Innovation Challenge Finalist",
+    description: "Organized by RISA, UN Women, and Ministry of Gender",
+    year: "2024"
+  }
+]
 
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Skills", link: "#skills" },
   { name: "Projects", link: "#projects" },
-  { name: "Contact", link: "#contact" },
-];
-
-export const skills = [
-  {
-    name: "Javascript",
-    icon: "/logos/javascript.svg"
-  },
-   {
-    name: "Typescript",
-    icon: "/logos/typescript.svg"
-  },
-   {
-    name: "React",
-    icon: "/logos/react.svg"
-  },
-   {
-    name: "Next",
-    icon: "/logos/nextdotjs.svg"
-  },
-  {
-    name: "Node",
-    icon: "/logos/nodedotjs.svg"
-  }
-  ,
-  {
-    name: "Express",
-    icon: "/logos/express.svg"
-
-    // icon: "https://img.icons8.com/color/512/express-js.png"
-  }
-  ,
-  {
-    name: "MongoDB",
-    icon: "/logos/mongodb.svg"
-
-  },
-  {
-    name: "MySQL",
-    icon: "/logos/mysql.svg"
-
-    // icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrLIsoAHea-BOhRzeFAqp8P9OChYR2Fch6mQ&s"
-  }
+  { name: "Experience", link: "#experience" },
+  { name: "Contact", link: "#contact" }
 ]
+

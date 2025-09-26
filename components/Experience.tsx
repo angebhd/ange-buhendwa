@@ -105,7 +105,7 @@ export default function Experience() {
                     </h2>
                     <div className="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
                     
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         {certifications.map((cert, index) => (
                             <motion.div
                                 key={index}
