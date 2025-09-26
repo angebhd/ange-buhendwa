@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ange Buhendwa - Professional Portfolio
 
-## Getting Started
+A modern, professional portfolio website showcasing my work as a Software & Electronics Engineer. Built with Next.js 15, TypeScript, and Tailwind CSS with smooth animations and responsive design.
 
-First, run the development server:
+## ✨ Features
+
+- **Modern Design**: Clean, professional UI with gradient backgrounds and 3D animations
+- **Smooth Animations**: Powered by Framer Motion for engaging user interactions
+- **Responsive**: Fully responsive design that works on all devices
+- **Dark/Light Mode**: Theme toggle with proper Tailwind v4 configuration
+- **Performance Optimized**: Built with Next.js 15 for optimal performance
+- **TypeScript**: Fully typed for better development experience
+
+## 🚀 Getting Started
+
+First, install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+```
+
+Then, run the development server:
+
+```bash
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: Next.js 15
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **Language**: TypeScript
+- **Theme**: next-themes
+- **Package Manager**: pnpm
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── app/                 # Next.js app directory
+├── components/          # React components
+│   ├── ui/             # Reusable UI components
+│   ├── About.tsx       # About section
+│   ├── Contact.tsx     # Contact section
+│   ├── Experience.tsx  # Experience & certifications
+│   ├── Hero.tsx        # Hero section with 3D animations
+│   ├── Projects.tsx    # Projects showcase
+│   └── Skills.tsx      # Skills section
+├── data/               # Static data
+├── lib/                # Utility functions
+└── public/             # Static assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Sections
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Hero**: Interactive 3D animations with floating particles
+- **About**: Personal background and tech stack overview
+- **Skills**: Interactive skill badges with hover effects
+- **Projects**: Featured projects with live demos and GitHub links
+- **Experience**: Training at the-gym Rwanda and certifications
+- **Contact**: Social links and contact information
 
-## Deploy on Vercel
+## 🌟 Highlights
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Real Projects**: University Management System, Imizi (Gender & Family Innovation Challenge finalist), Real Estate Platform
+- **Certifications**: Google Agile Project Management, Cisco Network Security, freeCodeCamp, and more
+- **Achievements**: 2nd place PicoCTF Africa, Innovation Challenge finalist
+- **Training**: the-gym Rwanda's intensive software development program
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deployment
+
+Deployed on Vercel with automatic deployments from GitHub.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Contact**: mickaelbhd@gmail.com | [LinkedIn](https://www.linkedin.com/in/angebhd/) | [GitHub](https://github.com/angebhd) | [Twitter](https://x.com/angebhd)
