@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaGraduationCap, FaAward, FaTrophy, FaMedal } from 'react-icons/fa'
+import { FaGraduationCap, FaAward, FaMedal } from 'react-icons/fa'
 
 const certifications = [
     {
@@ -82,7 +82,7 @@ export default function Experience() {
                                 <p className="text-blue-600 font-medium mb-2">the-gym Rwanda</p>
                                 <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">Nov 2024 – Present (~11 months)</p>
                                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                    Rwanda's most intense software development program - a 12-month intensive training 
+                                    Rwanda&apos;s most intense software development program - a 12-month intensive training 
                                     covering React.js, Node.js, TailwindCSS, Test Driven Development, CI/CD pipelines, 
                                     agile methodologies, and professional communication skills. Includes project work, 
                                     algorithm training, and one-on-one coaching sessions with international developers.

@@ -221,7 +221,7 @@ export default function Hero() {
                                 textShadow: "0 0 30px rgba(59, 130, 246, 0.3)"
                             }}
                         >
-                            <div className="text-green-400 text-4xl sm:text-5xl md:text-6xl mb-2">I'm</div>
+                            <div className="text-green-400 text-4xl sm:text-5xl md:text-6xl mb-2">I&apos;m</div>
                             <div className="bg-gradient-to-r from-blue-400 via-purple-500 via-green-400 to-cyan-400 bg-clip-text text-transparent relative">
                                 <TypewriterText text={personalInfo.name} />
                             </div>
@@ -367,7 +367,7 @@ export default function Hero() {
                                         animate={{ opacity: [0.3, 1, 0.3] }}
                                         transition={{ duration: 2, delay: i * 0.2, repeat: Infinity }}
                                     >
-                                        >
+                                        {'>'}
                                     </motion.span>
                                     <motion.span
                                         whileHover={{ 

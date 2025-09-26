@@ -2,11 +2,11 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaJava, FaDocker, FaLinux } from 'react-icons/fa'
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiNestjs, SiSpringboot, SiMysql, SiPostgresql, SiPrisma, SiJsonwebtokens, SiNginx, SiArduino } from 'react-icons/si'
+import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaJava, FaDocker } from 'react-icons/fa'
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiNestjs, SiSpringboot, SiMysql, SiPostgresql, SiPrisma, SiNginx } from 'react-icons/si'
 import { skills as skillsData } from '@/data'
 
-const skillIcons: { [key: string]: any } = {
+const skillIcons: { [key: string]: React.ComponentType<{ className?: string }> } = {
     'React': FaReact,
     'Next.js': SiNextdotjs,
     'TypeScript': SiTypescript,
