@@ -23,11 +23,11 @@ const TypewriterText = ({ text }: { text: string }) => {
     }, [currentIndex, text])
     
     return (
-        <span className="relative">
-            {displayText}
+        <span className="relative text-inherit">
+            <span className="text-inherit">{displayText}</span>
             {showCursor && (
                 <motion.span
-                    className="ml-1 w-1 h-12 sm:h-16 md:h-20 bg-cyan-400 inline-block"
+                    className="ml-1 w-1 h-10 sm:h-14 md:h-18 lg:h-20 bg-cyan-400 inline-block"
                     animate={{ opacity: [1, 0, 1] }}
                     transition={{ duration: 1, repeat: Infinity }}
                 />
@@ -212,17 +212,16 @@ export default function Hero() {
                         </motion.div>
                         
                         <motion.div 
-                            className="text-5xl sm:text-7xl md:text-9xl font-bold mb-6 text-gray-900 dark:text-white leading-tight font-mono relative text-center"
+                            className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-6 text-gray-900 dark:text-white leading-tight font-mono relative text-center"
                             initial={{ opacity: 0, y: 20, rotateX: -15, scale: 0.8 }}
                             animate={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
                             transition={{ delay: 0.5, duration: 1, type: "spring", stiffness: 100 }}
                             style={{ 
-                                perspective: "1000px",
-                                textShadow: "0 0 30px rgba(59, 130, 246, 0.3)"
+                                perspective: "1000px"
                             }}
                         >
-                            <div className="text-green-400 text-4xl sm:text-5xl md:text-6xl mb-2">I&apos;m</div>
-                            <div className="bg-gradient-to-r from-blue-400 via-purple-500 via-green-400 to-cyan-400 bg-clip-text text-transparent relative">
+                            <div className="text-green-400 text-3xl sm:text-5xl md:text-6xl lg:text-7xl mb-2">I&apos;m</div>
+                            <div className="text-gray-900 dark:text-white relative">
                                 <TypewriterText text={personalInfo.name} />
                             </div>
                             
