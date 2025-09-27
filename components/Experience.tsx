@@ -3,57 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaGraduationCap, FaAward, FaMedal } from 'react-icons/fa'
-
-const certifications = [
-    {
-        title: "Agile Project Management",
-        issuer: "Google",
-        date: "Aug 2024",
-        credential: "U7UL021NFGH3",
-        link: "https://www.coursera.org/account/accomplishments/verify/U7UL021NFGH3"
-    },
-    {
-        title: "Advanced Network Operations",
-        issuer: "Internet Society",
-        date: "Apr 2024",
-        credential: "",
-        link: "https://certificates.isoc.org/50db0a66-3e96-49c1-9e81-6ac5f9319947#gs.8f69tg"
-    },
-    {
-        title: "Junior Software Development",
-        issuer: "BAG Technologies",
-        date: "Feb 2024",
-        credential: "",
-        link: "https://app.bag.work/certificate/303767cc-9d18-4b82-ada7-ac4a52b0f215"
-    },
-    {
-        title: "Network Security",
-        issuer: "Cisco Networking Academy",
-        date: "Oct 2023",
-        credential: "",
-        link: "https://www.credly.com/badges/29a1b73d-ac83-48cb-a089-a9f543f1b4a3/public_url"
-    },
-    {
-        title: "Responsive Web Design",
-        issuer: "freeCodeCamp",
-        date: "Apr 2023",
-        credential: "",
-        link: "https://www.freecodecamp.org/certification/angebhd/responsive-web-design"
-    }
-]
-
-const achievements = [
-    {
-        title: "2nd Place at PicoCTF Africa",
-        description: "Undergraduate National Level Cybersecurity Competition",
-        year: "2024"
-    },
-    {
-        title: "Gender & Family Innovation Challenge Finalist",
-        description: "Organized by RISA, UN Women, and Ministry of Gender",
-        year: "2024"
-    }
-]
+import { experience, certifications, achievements } from '@/data'
 
 export default function Experience() {
     return (
@@ -77,15 +27,19 @@ export default function Experience() {
                             <FaGraduationCap className="text-blue-600 text-2xl mt-1" />
                             <div>
                                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                                    Software Development Training
+                                    {experience.training.title}
                                 </h3>
-                                <p className="text-blue-600 font-medium mb-2">the-gym Rwanda</p>
-                                <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">Nov 2024 – Present (~11 months)</p>
+                                <a 
+                                    href={experience.training.companyLink} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 font-medium mb-2 hover:text-blue-800 transition-colors"
+                                >
+                                    {experience.training.company}
+                                </a>
+                                <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">{experience.training.period}</p>
                                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                    Rwanda&apos;s most intense software development program - a 12-month intensive training 
-                                    covering React.js, Node.js, TailwindCSS, Test Driven Development, CI/CD pipelines, 
-                                    agile methodologies, and professional communication skills. Includes project work, 
-                                    algorithm training, and one-on-one coaching sessions with international developers.
+                                    {experience.training.description}
                                 </p>
                             </div>
                         </div>

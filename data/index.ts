@@ -88,8 +88,9 @@ export const projects = [
 export const experience = {
   training: {
     title: "Software Development Training",
-    company: "the-gym Rwanda",
-    period: "Nov 2024 – Present (~11 months)",
+    company: "The-gym Rwanda",
+    companyLink: "https://www.the-gym.rw/",
+    period: "Nov 2024 – Present",
     description: "Rwanda's most intense software development program - a 12-month intensive training with 20-25 hours/week workload. Focuses on JavaScript fundamentals, React.js, Node.js, algorithm training, Test Driven Development, CI/CD pipelines, and agile methodologies. Includes weekly one-on-one coaching with international senior developers, project work with increasing complexity, and professional communication skills for international client projects."
   }
 }
