@@ -293,6 +293,28 @@ export default function Hero() {
                             </motion.span>
                         </motion.a>
                         <motion.a 
+                            href="/blog"
+                            whileHover={{ 
+                                scale: 1.05, 
+                                y: -3,
+                                boxShadow: "0 15px 30px rgba(34, 197, 94, 0.2)",
+                                rotateX: -2
+                            }}
+                            whileTap={{ scale: 0.95 }}
+                            className="px-8 py-4 border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white rounded-xl font-semibold transition-all duration-300 relative overflow-hidden group flex items-center justify-center"
+                            style={{ transformStyle: "preserve-3d" }}
+                        >
+                            <motion.div
+                                className="absolute inset-0 bg-green-600 origin-left"
+                                initial={{ scaleX: 0 }}
+                                whileHover={{ scaleX: 1 }}
+                                transition={{ duration: 0.3 }}
+                            />
+                            <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+                                Read My Blog
+                            </span>
+                        </motion.a>
+                        <motion.a 
                             href="#contact"
                             whileHover={{ 
                                 scale: 1.05, 

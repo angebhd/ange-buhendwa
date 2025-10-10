@@ -7,7 +7,7 @@ import { experience, certifications, achievements } from '@/data'
 
 export default function Experience() {
     return (
-        <section className="py-20 bg-white dark:bg-gray-900">
+        <section id="experience" className="py-20 bg-white dark:bg-gray-900">
             <div className="max-w-6xl mx-auto px-4">
                 {/* Experience */}
                 <motion.div
