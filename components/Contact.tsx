@@ -112,7 +112,7 @@ export default function Contact() {
                     className="text-center mt-16 pt-8 border-t border-gray-200 dark:border-gray-700"
                 >
                     <p className="text-gray-500 dark:text-gray-400">
-                        © {new Date().getFullYear()} Ange Buhendwa.
+                        &copy; {new Date().getFullYear()} Ange Buhendwa.
                     </p>
                 </motion.div>
             </div>
