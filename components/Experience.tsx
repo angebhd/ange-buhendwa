@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaGraduationCap, FaAward, FaMedal } from 'react-icons/fa'
+import { FaGraduationCap, FaAward, FaMedal, FaBriefcase } from 'react-icons/fa'
 import { experience, certifications, achievements } from '@/data'
 
 export default function Experience() {
@@ -17,32 +17,47 @@ export default function Experience() {
                     viewport={{ once: true }}
                     className="mb-16"
                 >
-                    <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white text-center">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white text-center">
                         <span className="text-blue-600">Experience</span>
                     </h2>
-                    <div className="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
-                    
-                    <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg">
-                        <div className="flex items-start space-x-4">
-                            <FaGraduationCap className="text-blue-600 text-2xl mt-1" />
-                            <div>
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                                    {experience.training.title}
-                                </h3>
-                                <a 
-                                    href={experience.training.companyLink} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 font-medium mb-2 hover:text-blue-800 transition-colors"
-                                >
-                                    {experience.training.company}
-                                </a>
-                                <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">{experience.training.period}</p>
-                                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                    {experience.training.description}
-                                </p>
-                            </div>
-                        </div>
+                    <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-12 rounded-full"></div>
+
+                    <div className="space-y-6">
+                        {experience.map((exp, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg"
+                            >
+                                <div className="flex items-start space-x-4">
+                                    {exp.type === 'work' ? (
+                                        <FaBriefcase className="text-blue-600 text-2xl mt-1" />
+                                    ) : (
+                                        <FaGraduationCap className="text-blue-600 text-2xl mt-1" />
+                                    )}
+                                    <div>
+                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                                            {exp.title}
+                                        </h3>
+                                        <a
+                                            href={exp.companyLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-600 font-medium mb-2 hover:text-blue-800 transition-colors"
+                                        >
+                                            {exp.company}
+                                        </a>
+                                        <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">{exp.period}</p>
+                                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                            {exp.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </motion.div>
 
@@ -58,7 +73,7 @@ export default function Experience() {
                         <span className="text-blue-600">Certifications</span>
                     </h2>
                     <div className="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
-                    
+
                     <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         {certifications.map((cert, index) => (
                             <motion.div
@@ -72,9 +87,9 @@ export default function Experience() {
                                 <div className="flex items-start space-x-3">
                                     <FaAward className="text-blue-600 text-xl mt-1" />
                                     <div>
-                                        <a 
-                                            href={cert.link} 
-                                            target="_blank" 
+                                        <a
+                                            href={cert.link}
+                                            target="_blank"
                                             rel="noopener noreferrer"
                                             className="font-bold text-gray-900 dark:text-white mb-1 hover:text-blue-600 transition-colors"
                                         >
@@ -87,9 +102,9 @@ export default function Experience() {
                                                 ID: {cert.credential}
                                             </p>
                                         )}
-                                        <a 
-                                            href={cert.link} 
-                                            target="_blank" 
+                                        <a
+                                            href={cert.link}
+                                            target="_blank"
                                             rel="noopener noreferrer"
                                             className="inline-block mt-2 text-xs text-blue-600 hover:text-blue-800 transition-colors"
                                         >
@@ -113,7 +128,7 @@ export default function Experience() {
                         <span className="text-blue-600">Achievements</span>
                     </h2>
                     <div className="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
-                    
+
                     <div className="grid md:grid-cols-2 gap-8">
                         {achievements.map((achievement, index) => (
                             <motion.div

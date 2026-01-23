@@ -2,24 +2,33 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaJava, FaDocker } from 'react-icons/fa'
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiNestjs, SiSpringboot, SiMysql, SiPostgresql, SiPrisma, SiNginx } from 'react-icons/si'
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiNestjs, SiSpringboot, SiMysql, SiPostgresql, SiPrisma, SiNginx, SiGraphql, SiJest } from 'react-icons/si'
 import { skills as skillsData } from '@/data'
 
-const skillIcons: { [key: string]: React.ComponentType<{ className?: string }> } = {
+const skillIcons: { [key: string]: React.ComponentType<{ className?: string }> | string } = {
     'React': FaReact,
     'Next.js': SiNextdotjs,
     'TypeScript': SiTypescript,
+    'TailwindCSS': SiTailwindcss,
+
     'Node.js': FaNodeJs,
     'Express': SiExpress,
     'NestJS': SiNestjs,
-    'Spring Boot': SiSpringboot,
+    'Jest': SiJest,
+
     'Java': FaJava,
-    'TailwindCSS': SiTailwindcss,
+    'Spring Boot': SiSpringboot,
+    'GraphQL': SiGraphql,
+    'Socket.IO': '/socketio.png',
+
     'MongoDB': SiMongodb,
     'PostgreSQL': SiPostgresql,
     'MySQL': SiMysql,
     'Prisma': SiPrisma,
+    
+    'WebSockets': '/websocket.png',
     'Docker': FaDocker,
     'Nginx': SiNginx,
     'Git': FaGitAlt,
@@ -41,12 +50,12 @@ export default function Skills() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
                         Skills & <span className="text-blue-600">Technologies</span>
                     </h2>
-                    <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-                    <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                        Technologies I use to bring ideas to life
+                    <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-6 rounded-full"></div>
+                    <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
+                        Technologies and tools I work with
                     </p>
                 </motion.div>
 
@@ -61,7 +70,18 @@ export default function Skills() {
                             whileHover={{ scale: 1.05 }}
                             className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg text-center hover:shadow-lg transition-all duration-300"
                         >
-                            <skill.icon className={`text-4xl ${skill.color} mx-auto mb-4`} />
+                            {typeof skill.icon === 'string' ? (
+                                <div className="w-16 h-16 mx-auto mb-4 relative">
+                                    <Image
+                                        src={skill.icon}
+                                        alt={skill.name}
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
+                            ) : (
+                                <skill.icon className={`text-4xl ${skill.color} mx-auto mb-4`} />
+                            )}
                             <h3 className="text-gray-900 dark:text-white font-medium">{skill.name}</h3>
                         </motion.div>
                     ))}

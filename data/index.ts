@@ -1,8 +1,9 @@
 export const personalInfo = {
   name: "Ange Buhendwa",
-  title: "Software Developer & Electronics Engineer",
-  description: "I specialize in backend development, building scalable APIs and server-side applications with Spring Boot, Node.js, and database technologies. Currently training at Rwanda's most intensive software development program while pursuing my final year in IT.",
+  title: "Backend Developer & Electronics Engineer",
+  description: "Backend developer passionate about building scalable systems that solve real problems. Working with modern technologies to create robust APIs and efficient server-side applications.",
   email: "mickaelbhd@gmail.com",
+  cvLink: "https://docs.google.com/document/d/1dxyZMf4WBdXvpf8obDLI9kHE7C8RlHoE/edit?usp=sharing&ouid=104808765494925975986&rtpof=true&sd=true",
   social: {
     github: "https://github.com/angebhd",
     linkedin: "https://www.linkedin.com/in/angebhd/",
@@ -13,16 +14,16 @@ export const personalInfo = {
 export const about = {
   title: "Bridging Hardware & Software Innovation",
   description: [
-    "I'm Ange Buhendwa, a final-year Information Technology student with a unique foundation in Electrical and Electronics Engineering. This dual perspective allows me to understand technology from both hardware and software angles, with a strong focus on backend architecture and system design.",
-    "Currently enrolled in the-gym Rwanda's 12-month intensive software development program, dedicating 20-25 hours weekly to advanced training in JavaScript fundamentals, React.js, Node.js, and Test Driven Development. I receive weekly one-on-one coaching from international senior developers while working on projects with increasing complexity, preparing for international client work standards."
+    "With a foundation in both Electrical Engineering and Information Technology, I bring a unique perspective to software development. This dual background helps me build systems that balance scalability with hardware constraints and performance considerations.",
+    "Focused on backend development with modern technologies, creating clean and maintainable code. Currently expanding my skills in microservices architecture and system design through hands-on projects and continuous learning."
   ],
   techStacks: [
     {
       category: "Backend & APIs",
-      technologies: "Spring Boot, Node.js, Express, NestJS, RESTful APIs, TDD, CI/CD"
+      technologies: "Spring Boot, Node.js, Express, NestJS, RESTful APIs, GraphQL, TDD, CI/CD"
     },
     {
-      category: "Database & Storage", 
+      category: "Database & Storage",
       technologies: "PostgreSQL, MySQL, MongoDB, Prisma, Database Design, Query Optimization"
     },
     {
@@ -31,7 +32,7 @@ export const about = {
     },
     {
       category: "DevOps & Hardware",
-      technologies: "Docker, Nginx, Git, Linux, Arduino, NodeMCU, Active Directory"
+      technologies: "Docker, Nginx, Git, Linux"
     }
   ]
 }
@@ -43,8 +44,12 @@ export const skills = [
   { name: 'Node.js', color: 'text-green-600' },
   { name: 'Express', color: 'text-gray-700 dark:text-gray-300' },
   { name: 'NestJS', color: 'text-red-600' },
+  { name: 'Socket.IO', color: 'text-gray-900 dark:text-white' },
+  { name: 'WebSockets', color: 'text-blue-400' },
+  { name: 'GraphQL', color: 'text-pink-600' },
   { name: 'Spring Boot', color: 'text-green-700' },
   { name: 'Java', color: 'text-orange-600' },
+  { name: 'Jest', color: 'text-red-500' },
   { name: 'TailwindCSS', color: 'text-cyan-500' },
   { name: 'MongoDB', color: 'text-green-500' },
   { name: 'PostgreSQL', color: 'text-blue-700' },
@@ -59,7 +64,7 @@ export const projects = [
   {
     id: 1,
     title: "University Management System",
-    description: "Academic project for Web Technology & Internet course. Comprehensive system to manage students, staff, registrations, and attendance with modern web technologies.",
+    description: "Full-stack management system for student enrollment, staff management, and attendance tracking. React frontend with Spring Boot RESTful API backend.",
     technologies: ["React", "TailwindCSS", "Spring Boot"],
     liveUrl: "#",
     githubUrl: "https://github.com/angebhd/auca-webTech-finalExam",
@@ -69,7 +74,7 @@ export const projects = [
   {
     id: 2,
     title: "Imizi",
-    description: "A family cohesion mobile app for the Gender & Family Innovation Challenge (RISA, UN Women, Ministry of Gender). Strengthens family bonds through shared activities and communication tools.",
+    description: "Family cohesion mobile app for the Gender & Family Innovation Challenge (RISA, UN Women). Features shared calendars, activities, and messaging to strengthen family relationships.",
     technologies: ["React Native", "Expo", "Express.js", "MongoDB"],
     liveUrl: "#",
     githubUrl: "https://github.com/angebhd/imizi-app"
@@ -77,7 +82,7 @@ export const projects = [
   {
     id: 3,
     title: "Real Estate Platform",
-    description: "A comprehensive platform for renting houses, property discovery, and rent management. Built with enterprise-grade architecture and security.",
+    description: "Property rental platform with advanced search and listing management. Built with Next.js, NestJS backend, PostgreSQL database, and JWT authentication.",
     technologies: ["Next.js", "NestJS", "PostgreSQL", "JWT"],
     liveUrl: "#",
     githubUrl: "#",
@@ -85,17 +90,33 @@ export const projects = [
   }
 ]
 
-export const experience = {
-  training: {
+export const experience = [
+  {
+    title: "Backend Developer",
+    company: "Elipt",
+    companyLink: "https://elipt.tech/",
+    period: "Dec 2025 – Present",
+    description: "Building scalable backend systems with real-time communication using WebSockets and Socket.IO. Implementing SMS integration through REST APIs and managing CI/CD pipelines for production deployments.",
+    type: "work"
+  },
+  {
     title: "Software Development Training",
     company: "The-gym Rwanda",
     companyLink: "https://www.the-gym.rw/",
-    period: "Nov 2024 – Present",
-    description: "Rwanda's most intense software development program - a 12-month intensive training with 20-25 hours/week workload. Focuses on JavaScript fundamentals, React.js, Node.js, algorithm training, Test Driven Development, CI/CD pipelines, and agile methodologies. Includes weekly one-on-one coaching with international senior developers, project work with increasing complexity, and professional communication skills for international client projects."
+    period: "Nov 2024 – Dec 2025",
+    description: "Completed 12-month intensive software development program with 20-25 hours/week. Mastered JavaScript, React.js, Node.js, TDD, CI/CD pipelines, and Agile methodologies with weekly mentorship from senior developers.",
+    type: "training"
   }
-}
+]
 
 export const certifications = [
+  {
+    title: "Software Development Program",
+    issuer: "The-gym Rwanda",
+    date: "Dec 2025",
+    credential: "",
+    link: "https://drive.google.com/file/d/1BB-OdNUVbSy7RJGmT3MORRYwbQED2Xts/view?usp=sharing"
+  },
   {
     title: "Agile Project Management",
     issuer: "Google",

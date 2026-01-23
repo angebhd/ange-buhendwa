@@ -31,14 +31,14 @@ export default function About() {
                             Bridging Hardware & Software Innovation
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                            I&apos;m Ange Buhendwa, a final-year Information Technology student with a unique foundation 
-                            in Electrical and Electronics Engineering. This dual perspective allows me to understand 
-                            technology from both hardware and software angles, creating more comprehensive solutions.
+                            With a foundation in both Electrical Engineering and Information Technology, I bring
+                            a unique perspective to software development. This dual background helps me build
+                            systems that balance scalability with hardware constraints and performance considerations.
                         </p>
                         <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                            Currently immersed in Rwanda&apos;s most intensive software development program at the-gym, 
-                            I&apos;m passionate about building secure, scalable applications while exploring the evolving 
-                            landscape of cybersecurity. I believe in writing code that not only works but makes a meaningful impact.
+                            Focused on backend development with modern technologies, creating clean and maintainable
+                            code. Currently expanding my skills in microservices architecture and system design
+                            through hands-on projects and continuous learning.
                         </p>
                     </motion.div>
 
@@ -64,7 +64,7 @@ export default function About() {
                         <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm">
                             <h4 className="text-lg font-semibold text-blue-600 mb-2">DevOps & Hardware</h4>
                             <p className="text-gray-600 dark:text-gray-300 text-sm">
-                                Docker, Nginx, Git, Linux, Arduino, NodeMCU, Active Directory
+                                Docker, Nginx, Git, Linux, Active Directory
                             </p>
                         </div>
                     </motion.div>
