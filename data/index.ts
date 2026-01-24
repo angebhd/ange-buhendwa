@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Ange Buhendwa",
-  title: "Backend Developer & Electronics Engineer",
-  description: "Backend developer passionate about building scalable systems that solve real problems. Working with modern technologies to create robust APIs and efficient server-side applications.",
+  title: "Software engineer & Electronics Engineer",
+  description: "Software engineer passionate about building scalable systems that solve real problems. Working with modern technologies to mainly create robust APIs and efficient server-side applications.",
   email: "mickaelbhd@gmail.com",
   cvLink: "https://docs.google.com/document/d/1dxyZMf4WBdXvpf8obDLI9kHE7C8RlHoE/edit?usp=sharing&ouid=104808765494925975986&rtpof=true&sd=true",
   social: {
