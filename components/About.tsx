@@ -2,6 +2,15 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import { FaServer, FaDatabase, FaCode, FaTools } from 'react-icons/fa'
+import { about } from '@/data'
+
+const categoryConfig: Record<string, { icon: React.ComponentType<{ className?: string }>, border: string, text: string, bg: string }> = {
+    "Backend & APIs": { icon: FaServer, border: "border-blue-500", text: "text-blue-600 dark:text-blue-400", bg: "bg-blue-50 dark:bg-blue-900/20" },
+    "Database & Storage": { icon: FaDatabase, border: "border-green-500", text: "text-green-600 dark:text-green-400", bg: "bg-green-50 dark:bg-green-900/20" },
+    "Frontend (Supporting)": { icon: FaCode, border: "border-purple-500", text: "text-purple-600 dark:text-purple-400", bg: "bg-purple-50 dark:bg-purple-900/20" },
+    "DevOps & Hardware": { icon: FaTools, border: "border-orange-500", text: "text-orange-600 dark:text-orange-400", bg: "bg-orange-50 dark:bg-orange-900/20" },
+}
 
 export default function About() {
     return (
@@ -14,13 +23,13 @@ export default function About() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
                         About <span className="text-blue-600">Me</span>
                     </h2>
-                    <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+                    <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full"></div>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="grid md:grid-cols-2 gap-12 items-start">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -28,46 +37,47 @@ export default function About() {
                         viewport={{ once: true }}
                     >
                         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                            Bridging Hardware & Software Innovation
+                            {about.title}
                         </h3>
-                        <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                            With a foundation in both Electrical Engineering and Information Technology, I bring
-                            a unique perspective to software development. This dual background helps me build
-                            systems that balance scalability with hardware constraints and performance considerations.
-                        </p>
-                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                            Focused on backend development with modern technologies, creating clean and maintainable
-                            code. Currently expanding my skills in microservices architecture and system design
-                            through hands-on projects and continuous learning.
-                        </p>
+                        {about.description.map((paragraph, i) => (
+                            <p key={i} className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                                {paragraph}
+                            </p>
+                        ))}
                     </motion.div>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                        className="space-y-6"
-                    >
-                        <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm">
-                            <h4 className="text-lg font-semibold text-blue-600 mb-2">Frontend & Mobile</h4>
-                            <p className="text-gray-600 dark:text-gray-300 text-sm">
-                                React, Next.js, React Native, TypeScript, TailwindCSS, HTML
-                            </p>
-                        </div>
-                        <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm">
-                            <h4 className="text-lg font-semibold text-blue-600 mb-2">Backend & Database</h4>
-                            <p className="text-gray-600 dark:text-gray-300 text-sm">
-                                Node.js, Express, NestJS, Spring Boot, MySQL, PostgreSQL, MongoDB
-                            </p>
-                        </div>
-                        <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm">
-                            <h4 className="text-lg font-semibold text-blue-600 mb-2">DevOps & Hardware</h4>
-                            <p className="text-gray-600 dark:text-gray-300 text-sm">
-                                Docker, Nginx, Git, Linux, Active Directory
-                            </p>
-                        </div>
-                    </motion.div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {about.techStacks.map((stack, i) => {
+                            const config = categoryConfig[stack.category] ?? {
+                                icon: FaCode,
+                                border: "border-blue-500",
+                                text: "text-blue-600 dark:text-blue-400",
+                                bg: "bg-blue-50 dark:bg-blue-900/20"
+                            }
+                            const Icon = config.icon
+                            return (
+                                <motion.div
+                                    key={stack.category}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                                    viewport={{ once: true }}
+                                    whileHover={{ y: -3 }}
+                                    className={`bg-white dark:bg-gray-700 p-5 rounded-xl shadow-sm border-l-4 hover:shadow-md transition-all duration-300 ${config.border}`}
+                                >
+                                    <div className={`flex items-center gap-2 mb-2 ${config.text}`}>
+                                        <div className={`p-1.5 rounded-lg ${config.bg}`}>
+                                            <Icon className="text-base" />
+                                        </div>
+                                        <h4 className="text-sm font-semibold">{stack.category}</h4>
+                                    </div>
+                                    <p className="text-gray-500 dark:text-gray-400 text-xs leading-relaxed">
+                                        {stack.technologies}
+                                    </p>
+                                </motion.div>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         </section>
