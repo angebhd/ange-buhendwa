@@ -39,15 +39,15 @@ const TypewriterText = ({ text }: { text: string }) => {
 export default function Hero() {
     return (
         <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4 relative overflow-hidden">
-            {/* Epic Geeky Matrix-style Background */}
+            {/* Geeky Matrix-style Background */}
             <div className="absolute inset-0 overflow-hidden">
-                {/* Enhanced Matrix rain with hex codes */}
-                {[...Array(25)].map((_, i) => (
+                {/* Matrix rain */}
+                {[...Array(14)].map((_, i) => (
                     <motion.div
                         key={`matrix-${i}`}
                         className="absolute text-green-500/30 font-mono text-xs select-none"
                         style={{
-                            left: `${i * 4}%`,
+                            left: `${i * 7}%`,
                             top: '-15%'
                         }}
                         animate={{
@@ -70,7 +70,7 @@ export default function Hero() {
                 ))}
 
                 {/* Floating code symbols with glow */}
-                {['<div>', '</>', '{...}', '[]', 'async', 'await', '===', '!==', 'const', 'let'].map((symbol, i) => (
+                {['<div>', '{...}', 'async', 'await', 'const'].map((symbol, i) => (
                     <motion.div
                         key={`symbol-${i}`}
                         className="absolute text-cyan-400/40 font-mono text-sm font-bold"
@@ -146,7 +146,7 @@ export default function Hero() {
                 />
 
                 {/* Floating geometric shapes */}
-                {[...Array(6)].map((_, i) => (
+                {[...Array(4)].map((_, i) => (
                     <motion.div
                         key={`geo-${i}`}
                         className={`absolute w-4 h-4 border-2 border-blue-400/30 ${i % 2 === 0 ? 'rotate-45' : 'rounded-full'}`}
@@ -190,7 +190,7 @@ export default function Hero() {
                     <motion.div className="relative">
                         {/* Terminal-style prompt */}
                         <motion.div
-                            className="font-mono text-green-500 text-xs mb-2 flex items-center"
+                            className="font-mono text-green-500 text-xs mb-2 flex items-center justify-center"
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.1, duration: 0.6 }}
