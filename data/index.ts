@@ -57,7 +57,8 @@ export const skills = [
   { name: 'Prisma', color: 'text-gray-900 dark:text-white' },
   { name: 'Docker', color: 'text-blue-500' },
   { name: 'Nginx', color: 'text-green-600' },
-  { name: 'Git', color: 'text-red-500' }
+  { name: 'Git', color: 'text-red-500' },
+  { name: 'AWS', color: 'text-orange-500' }
 ]
 
 export const projects = [
