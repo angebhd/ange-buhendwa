@@ -37,7 +37,7 @@ export default function Projects() {
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
                         Featured <span className="text-blue-600">Projects</span>
                     </h2>
-                    <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-6 rounded-full"></div>
+                    <div className="w-24 h-1.5 bg-linear-to-r from-blue-500 to-blue-600 mx-auto mb-6 rounded-full"></div>
                     <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
                         Recent projects showcasing my technical skills and problem-solving approach
                     </p>
@@ -60,7 +60,7 @@ export default function Projects() {
                                 whileHover={{ y: -8 }}
                                 className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-gray-600"
                             >
-                                <div className={`relative h-52 bg-gradient-to-br ${gradient.bg} flex items-center justify-center overflow-hidden`}>
+                                <div className={`relative h-52 bg-linear-to-br ${gradient.bg} flex items-center justify-center overflow-hidden`}>
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         <span className={`font-mono font-bold text-5xl opacity-10 select-none ${gradient.accent}`}>
                                             {String(index + 1).padStart(2, '0')}
@@ -70,7 +70,7 @@ export default function Projects() {
                                         {project.title}
                                     </span>
 
-                                    <div className={`absolute inset-0 bg-gradient-to-t ${gradient.overlay} opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 gap-3`}>
+                                    <div className={`absolute inset-0 bg-linear-to-t ${gradient.overlay} opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 gap-3`}>
                                         {hasLiveUrl && (
                                             <motion.a
                                                 href={project.liveUrl}

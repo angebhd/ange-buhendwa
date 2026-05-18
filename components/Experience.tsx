@@ -11,7 +11,7 @@ function SectionHeader({ title, accent }: { title: string; accent: string }) {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
                 <span className="text-blue-600">{accent}</span>{title}
             </h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full"></div>
+            <div className="w-24 h-1.5 bg-linear-to-r from-blue-500 to-blue-600 mx-auto rounded-full"></div>
         </div>
     )
 }
@@ -32,7 +32,7 @@ export default function Experience() {
                     <SectionHeader title="" accent="Experience" />
 
                     <div className="relative">
-                        <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 via-blue-300 to-transparent hidden sm:block"></div>
+                        <div className="absolute left-6 top-0 bottom-0 w-px bg-linear-to-b from-blue-500 via-blue-300 to-transparent hidden sm:block"></div>
 
                         <div className="space-y-6">
                             {experience.map((exp, index) => (
@@ -54,7 +54,7 @@ export default function Experience() {
 
                                     <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-blue-200 dark:hover:border-blue-800 hover:shadow-md transition-all duration-300">
                                         <div className="flex items-start gap-4">
-                                            <div className="sm:hidden flex-shrink-0 w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/30 border-2 border-blue-500 flex items-center justify-center">
+                                            <div className="sm:hidden shrink-0 w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/30 border-2 border-blue-500 flex items-center justify-center">
                                                 {exp.type === 'work' ? (
                                                     <FaBriefcase className="text-blue-600 dark:text-blue-400" />
                                                 ) : (
@@ -113,7 +113,7 @@ export default function Experience() {
                                 className="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-blue-200 dark:hover:border-blue-800 hover:shadow-md transition-all duration-300"
                             >
                                 <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center">
+                                    <div className="shrink-0 w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center">
                                         <FaAward className="text-blue-600 dark:text-blue-400 text-lg" />
                                     </div>
                                     <div className="flex-1 min-w-0">
@@ -162,7 +162,7 @@ export default function Experience() {
                                 className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-yellow-200 dark:hover:border-yellow-800/50 hover:shadow-md transition-all duration-300"
                             >
                                 <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 w-11 h-11 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 flex items-center justify-center">
+                                    <div className="shrink-0 w-11 h-11 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 flex items-center justify-center">
                                         <FaMedal className="text-yellow-500 dark:text-yellow-400 text-xl" />
                                     </div>
                                     <div>

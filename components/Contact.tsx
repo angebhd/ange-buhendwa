@@ -25,7 +25,7 @@ export default function Contact() {
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
                         Let&apos;s Work <span className="text-blue-600">Together</span>
                     </h2>
-                    <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-6 rounded-full"></div>
+                    <div className="w-24 h-1.5 bg-linear-to-r from-blue-500 to-blue-600 mx-auto mb-6 rounded-full"></div>
                     <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                         Have a project in mind? Let&apos;s discuss how we can bring your ideas to life.
                     </p>
@@ -110,7 +110,7 @@ export default function Contact() {
                             type="submit"
                             whileHover={{ scale: 1.02, y: -1 }}
                             whileTap={{ scale: 0.98 }}
-                            className="w-full px-6 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl font-semibold shadow-md hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
+                            className="w-full px-6 py-3.5 bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl font-semibold shadow-md hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
                         >
                             Send Message
                         </motion.button>

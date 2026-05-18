@@ -8,8 +8,8 @@ import { about } from '@/data'
 const categoryConfig: Record<string, { icon: React.ComponentType<{ className?: string }>, border: string, text: string, bg: string }> = {
     "Backend & APIs": { icon: FaServer, border: "border-blue-500", text: "text-blue-600 dark:text-blue-400", bg: "bg-blue-50 dark:bg-blue-900/20" },
     "Database & Storage": { icon: FaDatabase, border: "border-green-500", text: "text-green-600 dark:text-green-400", bg: "bg-green-50 dark:bg-green-900/20" },
-    "Frontend (Supporting)": { icon: FaCode, border: "border-purple-500", text: "text-purple-600 dark:text-purple-400", bg: "bg-purple-50 dark:bg-purple-900/20" },
-    "DevOps & Hardware": { icon: FaTools, border: "border-orange-500", text: "text-orange-600 dark:text-orange-400", bg: "bg-orange-50 dark:bg-orange-900/20" },
+    "Frontend (Supporting)": { icon: FaCode, border: "border-indigo-500", text: "text-indigo-600 dark:text-indigo-400", bg: "bg-indigo-50 dark:bg-indigo-900/20" },
+    "DevOps & Hardware": { icon: FaTools, border: "border-cyan-500", text: "text-cyan-600 dark:text-cyan-400", bg: "bg-cyan-50 dark:bg-cyan-900/20" },
 }
 
 export default function About() {
@@ -26,7 +26,7 @@ export default function About() {
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
                         About <span className="text-blue-600">Me</span>
                     </h2>
-                    <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full"></div>
+                    <div className="w-24 h-1.5 bg-linear-to-r from-blue-500 to-blue-600 mx-auto rounded-full"></div>
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -39,8 +39,8 @@ export default function About() {
                         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                             {about.title}
                         </h3>
-                        {about.description.map((paragraph, i) => (
-                            <p key={i} className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                        {about.description.map((paragraph) => (
+                            <p key={paragraph.slice(0, 30)} className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                                 {paragraph}
                             </p>
                         ))}

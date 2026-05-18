@@ -3,7 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaJava, FaDocker } from 'react-icons/fa'
+import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaJava, FaDocker, FaAws } from 'react-icons/fa'
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiNestjs, SiSpringboot, SiMysql, SiPostgresql, SiPrisma, SiNginx, SiGraphql, SiJest } from 'react-icons/si'
 import { skills as skillsData } from '@/data'
 
@@ -28,13 +28,14 @@ const skillIcons: { [key: string]: React.ComponentType<{ className?: string }> |
     'Docker': FaDocker,
     'Nginx': SiNginx,
     'Git': FaGitAlt,
+    'AWS': FaAws,
 }
 
 const skillGroups = [
     { label: "Frontend", names: ['React', 'Next.js', 'TypeScript', 'TailwindCSS'] },
     { label: "Backend", names: ['Node.js', 'Express', 'NestJS', 'Java', 'Spring Boot', 'GraphQL', 'Socket.IO', 'WebSockets', 'Jest'] },
     { label: "Database", names: ['MongoDB', 'PostgreSQL', 'MySQL', 'Prisma'] },
-    { label: "DevOps & Tools", names: ['Docker', 'Nginx', 'Git'] },
+    { label: "DevOps & Tools", names: ['Docker', 'Nginx', 'Git', 'AWS'] },
 ]
 
 const groupColors: Record<string, { label: string; dot: string }> = {
@@ -60,7 +61,7 @@ export default function Skills() {
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
                         Skills & <span className="text-blue-600">Technologies</span>
                     </h2>
-                    <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-6 rounded-full"></div>
+                    <div className="w-24 h-1.5 bg-linear-to-r from-blue-500 to-blue-600 mx-auto mb-6 rounded-full"></div>
                     <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
                         Technologies and tools I work with
                     </p>
