@@ -3,12 +3,14 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { FaArrowDown } from 'react-icons/fa6'
-import { personalInfo } from '@/data'
+import { personalInfo, skills as allSkills } from '@/data'
 
-const TypewriterText = ({ text }: { text: string }) => {
+const terminalSkills = ['TypeScript', 'Spring Boot', 'NestJS', 'PostgreSQL', 'MongoDB', 'Next.js', 'Docker', 'AWS']
+    .map(name => allSkills.find(s => s.name === name)?.name ?? name)
+
+const TypewriterText = ({ text, className }: { text: string; className?: string }) => {
     const [displayText, setDisplayText] = useState('')
     const [currentIndex, setCurrentIndex] = useState(0)
-    const [showCursor, setShowCursor] = useState(true)
 
     useEffect(() => {
         if (currentIndex < text.length) {
@@ -17,21 +19,18 @@ const TypewriterText = ({ text }: { text: string }) => {
                 setCurrentIndex(currentIndex + 1)
             }, 100)
             return () => clearTimeout(timeout)
-        } else {
-            setTimeout(() => setShowCursor(false), 1000)
         }
     }, [currentIndex, text])
 
     return (
-        <span className="relative text-inherit">
-            <span className="text-inherit">{displayText}</span>
-            {showCursor && (
-                <motion.span
-                    className="ml-1 w-1 h-10 sm:h-14 md:h-18 lg:h-20 bg-cyan-400 inline-block"
-                    animate={{ opacity: [1, 0, 1] }}
-                    transition={{ duration: 1, repeat: Infinity }}
-                />
-            )}
+        <span className={`relative whitespace-nowrap ${className ?? ''}`}>
+            {displayText}
+            <motion.span
+                className="ml-1 w-[3px] bg-cyan-400 inline-block"
+                style={{ height: '0.85em', verticalAlign: 'middle' }}
+                animate={{ opacity: [1, 0, 1] }}
+                transition={{ duration: 1, repeat: Infinity }}
+            />
         </span>
     )
 }
@@ -212,17 +211,26 @@ export default function Hero() {
                         </motion.div>
 
                         <motion.div
-                            className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-6 text-gray-900 dark:text-white leading-tight font-mono relative text-center"
+                            className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight relative text-center"
                             initial={{ opacity: 0, y: 20, rotateX: -15, scale: 0.8 }}
                             animate={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
                             transition={{ delay: 0.5, duration: 1, type: "spring", stiffness: 100 }}
-                            style={{
-                                perspective: "1000px"
-                            }}
+                            style={{ perspective: "1000px" }}
                         >
-                            <div className="text-green-400 text-3xl sm:text-5xl md:text-6xl lg:text-7xl mb-2">I&apos;m</div>
-                            <div className="text-gray-900 dark:text-white relative">
-                                <TypewriterText text={personalInfo.name} />
+                            <motion.div
+                                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-mono font-medium mb-4"
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.3, duration: 0.5 }}
+                            >
+                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                                Hi, I&apos;m
+                            </motion.div>
+                            <div className="relative">
+                                <TypewriterText
+                                    text={personalInfo.name}
+                                    className="bg-linear-to-r from-blue-600 via-blue-400 to-cyan-400 bg-clip-text text-transparent"
+                                />
                             </div>
 
                             {/* Holographic scan line */}
@@ -375,12 +383,23 @@ export default function Hero() {
                                 transition={{ delay: 1.3, duration: 1 }}
                                 className="overflow-hidden whitespace-nowrap"
                             >
-                                ls -la /skills --sort=expertise
+                                cat profile.json
                             </motion.span>
                         </div>
 
+                        <motion.div
+                            className="flex items-center gap-2 text-xs mb-3 text-yellow-400"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 1.4 }}
+                        >
+                            <span className="text-green-400">›</span>
+                            <span className="text-gray-400">experience</span>
+                            <span className="text-white font-semibold">2+ years</span>
+                        </motion.div>
+
                         <div className="grid grid-cols-2 gap-2 text-xs">
-                            {['TypeScript', 'Express.js', 'Spring Boot', 'NestJS', 'PostgreSQL', 'MongoDB', 'Next.js', 'TailwindCSS'].map((tech, i) => (
+                            {terminalSkills.map((tech, i) => (
                                 <motion.div
                                     key={tech}
                                     className="flex items-center space-x-2 text-cyan-300"
@@ -396,18 +415,15 @@ export default function Hero() {
                                         {'>'}
                                     </motion.span>
                                     <motion.span
-                                        whileHover={{
-                                            scale: 1.05,
-                                            color: '#00ff00',
-                                            textShadow: '0 0 10px #00ff00'
-                                        }}
+                                        whileHover={{ scale: 1.05, color: '#00ff00', textShadow: '0 0 10px #00ff00' }}
                                         className="cursor-default"
                                     >
                                         {tech}
                                     </motion.span>
                                     <motion.span
-                                        className="text-green-500 text-xs"
-                                        animate={{ opacity: [0, 1] }}
+                                        className="text-green-500"
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
                                         transition={{ delay: 1.8 + i * 0.1 }}
                                     >
                                         ✓

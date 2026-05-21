@@ -3,7 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaJava, FaDocker, FaAws } from 'react-icons/fa'
+import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaJava, FaDocker, FaAws, FaGithub } from 'react-icons/fa'
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiNestjs, SiSpringboot, SiMysql, SiPostgresql, SiPrisma, SiNginx, SiGraphql, SiJest } from 'react-icons/si'
 import { skills as skillsData } from '@/data'
 
@@ -29,13 +29,14 @@ const skillIcons: { [key: string]: React.ComponentType<{ className?: string }> |
     'Nginx': SiNginx,
     'Git': FaGitAlt,
     'AWS': FaAws,
+    'GitHub': FaGithub,
 }
 
 const skillGroups = [
     { label: "Frontend", names: ['React', 'Next.js', 'TypeScript', 'TailwindCSS'] },
     { label: "Backend", names: ['Node.js', 'Express', 'NestJS', 'Java', 'Spring Boot', 'GraphQL', 'Socket.IO', 'WebSockets', 'Jest'] },
     { label: "Database", names: ['MongoDB', 'PostgreSQL', 'MySQL', 'Prisma'] },
-    { label: "DevOps & Tools", names: ['Docker', 'Nginx', 'Git', 'AWS'] },
+    { label: "DevOps & Tools", names: ['Docker', 'Nginx', 'Git', 'GitHub', 'AWS'] },
 ]
 
 const groupColors: Record<string, { label: string; dot: string }> = {
