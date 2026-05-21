@@ -53,9 +53,9 @@ export default function Projects() {
                         return (
                             <motion.div
                                 key={project.id}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: index * 0.15 }}
+                                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50, y: 20 }}
+                                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                                transition={{ duration: 0.6, delay: index * 0.12, type: "spring", stiffness: 80 }}
                                 viewport={{ once: true }}
                                 whileHover={{ y: -8 }}
                                 className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-gray-600"

@@ -32,7 +32,13 @@ export default function Experience() {
                     <SectionHeader title="" accent="Experience" />
 
                     <div className="relative">
-                        <div className="absolute left-6 top-0 bottom-0 w-px bg-linear-to-b from-blue-500 via-blue-300 to-transparent hidden sm:block"></div>
+                        <motion.div
+                            className="absolute left-6 top-0 w-px bg-linear-to-b from-blue-500 via-blue-300 to-transparent hidden sm:block"
+                            initial={{ height: 0 }}
+                            whileInView={{ height: "100%" }}
+                            transition={{ duration: 1.4, ease: "easeOut" }}
+                            viewport={{ once: true }}
+                        />
 
                         <div className="space-y-6">
                             {experience.map((exp, index) => (

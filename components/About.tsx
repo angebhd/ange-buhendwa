@@ -58,9 +58,9 @@ export default function About() {
                             return (
                                 <motion.div
                                     key={stack.category}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                                    initial={{ opacity: 0, scale: 0.8, y: 15 }}
+                                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                    transition={{ duration: 0.45, delay: i * 0.1, type: "spring", stiffness: 120 }}
                                     viewport={{ once: true }}
                                     whileHover={{ y: -3 }}
                                     className={`bg-white dark:bg-gray-700 p-5 rounded-xl shadow-sm border-l-4 hover:shadow-md transition-all duration-300 ${config.border}`}
