@@ -189,7 +189,7 @@ export default function Hero() {
                     <motion.div className="relative">
                         {/* Terminal-style prompt */}
                         <motion.div
-                            className="font-mono text-green-500 text-xs mb-2 flex items-center justify-center"
+                            className="font-mono text-green-500 text-xs flex items-center justify-center"
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.1, duration: 0.6 }}
@@ -211,21 +211,24 @@ export default function Hero() {
                         </motion.div>
 
                         <motion.div
+                            className="flex justify-center mt-1 mb-1"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.1, duration: 0.5 }}
+                        >
+                            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-mono font-medium">
+                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                                Hi, I&apos;m
+                            </span>
+                        </motion.div>
+
+                        <motion.div
                             className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight relative text-center"
                             initial={{ opacity: 0, y: 20, rotateX: -15, scale: 0.8 }}
                             animate={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
-                            transition={{ delay: 0.5, duration: 1, type: "spring", stiffness: 100 }}
+                            transition={{ delay: 0.3, duration: 1, type: "spring", stiffness: 100 }}
                             style={{ perspective: "1000px" }}
                         >
-                            <motion.div
-                                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-mono font-medium mb-4"
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: 0.3, duration: 0.5 }}
-                            >
-                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                Hi, I&apos;m
-                            </motion.div>
                             <div className="relative">
                                 <TypewriterText
                                     text={personalInfo.name}
@@ -383,20 +386,9 @@ export default function Hero() {
                                 transition={{ delay: 1.3, duration: 1 }}
                                 className="overflow-hidden whitespace-nowrap"
                             >
-                                cat profile.json
+                                ls /skills | sort -u
                             </motion.span>
                         </div>
-
-                        <motion.div
-                            className="flex items-center gap-2 text-xs mb-3 text-yellow-400"
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 1.4 }}
-                        >
-                            <span className="text-green-400">›</span>
-                            <span className="text-gray-400">experience</span>
-                            <span className="text-white font-semibold">2+ years</span>
-                        </motion.div>
 
                         <div className="grid grid-cols-2 gap-2 text-xs">
                             {terminalSkills.map((tech, i) => (
