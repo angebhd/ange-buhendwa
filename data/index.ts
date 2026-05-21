@@ -65,7 +65,19 @@ export const skills = [
   { name: 'GitHub', color: 'text-gray-900 dark:text-white' }
 ]
 
-export const projects = [
+export type Project = {
+  id: number
+  title: string
+  description: string
+  technologies: string[]
+  liveUrl: string
+  githubUrl?: string
+  backendUrl?: string
+  type?: string
+  status?: string
+}
+
+export const projects: Project[] = [
   {
     id: 1,
     title: "University Information Management System",
@@ -186,4 +198,3 @@ export const navItems = [
   { name: "Experience", link: "#experience" },
   { name: "Contact", link: "#contact" }
 ]
-
