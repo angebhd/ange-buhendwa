@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaJava, FaDocker, FaAws, FaGithub } from 'react-icons/fa'
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiNestjs, SiSpringboot, SiMysql, SiPostgresql, SiPrisma, SiNginx, SiGraphql, SiJest } from 'react-icons/si'
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiExpress, SiNestjs, SiSpringboot, SiMysql, SiPostgresql, SiPrisma, SiNginx, SiGraphql, SiJest, SiSpring, SiJunit5, SiHibernate } from 'react-icons/si'
 import { skills as skillsData } from '@/data'
 
 const skillIcons: { [key: string]: React.ComponentType<{ className?: string }> | string } = {
@@ -18,6 +18,9 @@ const skillIcons: { [key: string]: React.ComponentType<{ className?: string }> |
     'Jest': SiJest,
     'Java': FaJava,
     'Spring Boot': SiSpringboot,
+    'DataJPA': SiSpring,
+    'JUnit': SiJunit5,
+    'jOOQ': SiHibernate,
     'GraphQL': SiGraphql,
     'Socket.IO': '/socketio.png',
     'MongoDB': SiMongodb,
@@ -34,8 +37,8 @@ const skillIcons: { [key: string]: React.ComponentType<{ className?: string }> |
 
 const skillGroups = [
     { label: "Frontend", names: ['React', 'Next.js', 'TypeScript', 'TailwindCSS'] },
-    { label: "Backend", names: ['Node.js', 'Express', 'NestJS', 'Java', 'Spring Boot', 'GraphQL', 'Socket.IO', 'WebSockets', 'Jest'] },
-    { label: "Database", names: ['MongoDB', 'PostgreSQL', 'MySQL', 'Prisma'] },
+    { label: "Backend", names: ['Node.js', 'Express', 'NestJS', 'Java', 'Spring Boot', 'GraphQL', 'Socket.IO', 'WebSockets', 'Jest', 'JUnit'] },
+    { label: "Database", names: ['MongoDB', 'PostgreSQL', 'MySQL', 'Prisma', 'DataJPA', 'jOOQ'] },
     { label: "DevOps & Tools", names: ['Docker', 'Nginx', 'Git', 'GitHub', 'AWS'] },
 ]
 
