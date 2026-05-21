@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { FaArrowDown } from 'react-icons/fa6'
 import { personalInfo, skills as allSkills } from '@/data'
 
@@ -36,10 +36,13 @@ const TypewriterText = ({ text, className }: { text: string; className?: string 
 }
 
 export default function Hero() {
+    const { scrollY } = useScroll()
+    const bgY = useTransform(scrollY, [0, 600], [0, 180])
+
     return (
         <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 px-4 relative overflow-hidden">
             {/* Geeky Matrix-style Background */}
-            <div className="absolute inset-0 overflow-hidden">
+            <motion.div className="absolute inset-0 overflow-hidden" style={{ y: bgY }}>
                 {/* Matrix rain */}
                 {[...Array(14)].map((_, i) => (
                     <motion.div
@@ -176,7 +179,7 @@ export default function Hero() {
                     }}
                     transition={{ duration: 1, repeat: Infinity }}
                 />
-            </div>
+            </motion.div>
 
             <div className="max-w-5xl mx-auto text-center relative z-10">
                 <motion.div

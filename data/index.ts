@@ -65,13 +65,10 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "University Management System",
-    description: "Full-stack management system for student enrollment, staff management, and attendance tracking. React frontend with Spring Boot RESTful API backend.",
-    technologies: ["React", "TailwindCSS", "Spring Boot"],
-    liveUrl: "#",
-    githubUrl: "https://github.com/angebhd/auca-webTech-finalExam",
-    backendUrl: "https://github.com/angebhd/auca-webTech-midExam",
-    type: "Academic Project"
+    title: "University Information Management System",
+    description: "Full-stack information management system for student enrollment, staff management, and attendance tracking. Next.js frontend with Spring Boot RESTful API backend and integrated payment processing.",
+    technologies: ["Next.js", "TailwindCSS", "Spring Boot", "Payment Integration"],
+    liveUrl: "https://edulink.auca.ac.rw",
   },
   {
     id: 2,
@@ -83,13 +80,22 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Real Estate Platform",
-    description: "Property rental platform with advanced search and listing management. Built with Next.js, NestJS backend, PostgreSQL database, and JWT authentication.",
-    technologies: ["Next.js", "NestJS", "PostgreSQL", "JWT"],
-    liveUrl: "#",
+    title: "Synoorg Community",
+    description: "Backend APIs (web & mobile) for a community management platform. Covers announcements, events, and contributions. Built authentication, real-time chat, and push notification systems from scratch.",
+    technologies: ["REST APIs", "WebSockets", "Real-time", "Authentication", "SMS Integration"],
+    liveUrl: "https://community.synoorg.com",
     githubUrl: "#",
-    status: "In Development"
-  }
+    type: "Freelance"
+  },
+  // {
+  //   id: 4,
+  //   title: "Real Estate Platform",
+  //   description: "Property rental platform with advanced search and listing management. Built with Next.js, NestJS backend, PostgreSQL database, and JWT authentication.",
+  //   technologies: ["Next.js", "NestJS", "PostgreSQL", "JWT"],
+  //   liveUrl: "#",
+  //   githubUrl: "#",
+  //   status: "In Development"
+  // }
 ]
 
 export const experience = [
@@ -103,7 +109,7 @@ export const experience = [
   },
   {
     title: "Software Development Training",
-    company: "The-gym Rwanda",
+    company: "The-Gym Rwanda",
     companyLink: "https://www.the-gym.rw/",
     period: "Nov 2024 – Dec 2025",
     description: "Completed 12-month intensive software development program with 20-25 hours/week. Mastered JavaScript, React.js, Node.js, TDD, CI/CD pipelines, and Agile methodologies with weekly mentorship from senior developers.",
@@ -114,7 +120,7 @@ export const experience = [
 export const certifications = [
   {
     title: "Software Development Program",
-    issuer: "The-gym Rwanda",
+    issuer: "The-Gym Rwanda",
     date: "Dec 2025",
     credential: "",
     link: "https://drive.google.com/file/d/1BB-OdNUVbSy7RJGmT3MORRYwbQED2Xts/view?usp=sharing"
